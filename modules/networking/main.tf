@@ -34,7 +34,7 @@ resource "aws_subnet" "app_subnet" {
  
   cidr_block = cidrsubnet(aws_vpc.vpc.cidr_block, 4 , each.value)
 
-  map_public_ip_on_launch = true
+  map_public_ip_on_launch = false
 
   tags = {
     Name = "alloy app subnet"
